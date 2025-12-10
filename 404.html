@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Redirecting…</title>
+</head>
+<body>
+  <p>Redirecting…</p>
+  <script>
+    (function () {
+      const path = window.location.pathname;
+
+      // Normalize in case there's a trailing slash or subpath
+      const lowerPath = path.toLowerCase();
+
+      // Redirect livr.pdf -> LIVR arXiv
+      if (lowerPath === '/livr.pdf' || lowerPath.endsWith('/livr.pdf')) {
+        window.location.replace('https://likelvin.com/'); // TODO: put real LIVR arXiv URL here
+        return;
+      }
+
+      // Redirect tqca.pdf -> TQCA arXiv
+      if (lowerPath === '/tqca.pdf' || lowerPath.endsWith('/tqca.pdf')) {
+        window.location.replace('https://likelvin.com/'); // TODO: put real TQCA arXiv URL here
+        return;
+      }
+
+      // For all other missing paths, send back to your homepage
+      // If your site is at the root of likelvin.com, this is fine:
+      window.location.replace('/');
+      // If you ever serve from a subpath, e.g. /portfolio/, change to:
+      // window.location.replace('/portfolio/');
+    })();
+  </script>
+</body>
+</html>
