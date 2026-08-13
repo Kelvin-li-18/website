@@ -13,18 +13,6 @@
       // Normalize in case there's a trailing slash or subpath
       const lowerPath = path.toLowerCase();
 
-      // Redirect livr.pdf -> LIVR arXiv
-      if (lowerPath === '/livr.pdf' || lowerPath.endsWith('/livr.pdf')) {
-        window.location.replace('https://arxiv.org/abs/2512.21218'); // TODO: put real LIVR arXiv URL here
-        return;
-      }
-
-      // Redirect tqca.pdf -> TQCA arXiv
-      if (lowerPath === '/tqca.pdf' || lowerPath.endsWith('/tqca.pdf')) {
-        window.location.replace('https://likelvin.com/'); // TODO: put real TQCA arXiv URL here
-        return;
-      }
-
       // For all other missing paths, send back to your homepage
       // If your site is at the root of likelvin.com, this is fine:
       window.location.replace('/');
