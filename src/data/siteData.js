@@ -47,6 +47,31 @@ export const siteData = {
   ],
 
   publications: [
+      {
+      id: "dwm-emnlp-2026",
+      title: "Discriminative World Models for Web Agents",
+      venue: "EMNLP 2026 (Findings) · * Equal contribution",
+      authors: [
+        { name: "Kelvin Li", equal: true },
+        { name: "Dhruv Pendharkar", equal: true },
+        { name: "Anish Pahilajani" },
+        { name: "Chuyi Shang" },
+        { name: "Leon Oks" },
+        { name: "Leonid Karlinsky" },
+        { name: "Rogerio Feris" },
+        { name: "Trevor Darrell" },
+        { name: "Roei Herzig" },
+      ],
+      links: [
+        {
+          label: "arXiv",
+          href: "https://arxiv.org/abs/2609.02885",
+        },
+      ],
+      description:
+        "DWM trains web-agent world models to predict representations that distinguish the true outcome of an action from outcomes induced by alternative actions at the same decision state, making them more useful for downstream action selection and improving web-agent performance.",
+      image: "/images/dwm_teaser.png", 
+    },
     {
       id: "livr-cvpr-2026",
       title: "Latent Implicit Visual Reasoning",
